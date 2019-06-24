@@ -1,32 +1,20 @@
-package Cucumber.Test;
-
-import java.util.concurrent.TimeUnit;
-
-
-
-public class First {
-
-	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		String driverPath = "C:\\Users\\mohammadp\\Desktop\\Drivers\\chromedriver.exe";
-		 String Webdriver = "webdriver.chrome.driver";
-		  System.setProperty(Webdriver, driverPath);
-		WebDriver  driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(80,TimeUnit.SECONDS);
-	String baseUrl = "https://www.amazon.in/";
-		  driver.get(baseUrl);
-		  driver.manage().window().maximize();
-		 System.out.println(driver.getCurrentUrl()); 
-		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Iphones");
-		  Thread.sleep(2000);
-		  driver.findElement(By.className("nav-input")).click();
-		  Thread.sleep(2000);
-		 
-	  }
-	}
-
-
-
-
-
-cat r
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                // 
+            }
+        }
+        stage('Test') { 
+            steps {
+                // 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
+            }
+        }
+    }
+}
